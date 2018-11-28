@@ -1,5 +1,0 @@
-genie:
-  dbConfig:
-    # Uses MySQL.
-    database: HOUSECALL
-    host: localhost
