@@ -9,7 +9,7 @@ const mysql = require('mysql');
 const mc = mysql.createConnection({
     host: 'localhost',
     user: 'changbae',
-    password: 'bcb226',
+    password: 'bcb225',
     database: 'HOUSECALL'
 });
  
@@ -23,5 +23,5 @@ console.log('API server started on: ' + port);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./app/routes/approutes'); //importing route
+var routes = require('./routes/appRoutes'); //importing route
 routes(app); //register the route
