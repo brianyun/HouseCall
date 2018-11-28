@@ -15,6 +15,7 @@
     "express": "^4.16.4",
     "jade": "~1.11.0",
     "js-yaml": "^3.9.1",
+    "jstransformer": "^1.0.0",
     "keygenerator": "^1.0.4",
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
