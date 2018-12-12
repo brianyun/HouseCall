@@ -1,14 +1,33 @@
 <template>
-  <div class="white elevation-2">
-    <v-toolbar flat dense class="cyan" dark>
-      <v-toolbar-title dark>Title</v-toolbar-title>
+  <div>
+    <v-layout>
+      <!-- <img src="@/assets/doctor_img.jpg"> -->
+      <img src="@/assets/grey_img.svg">
+    </v-layout>
 
-      <slot name="action"></slot>
-    </v-toolbar>
+    <v-layout mt-3>
+      <v-flex>
+        <div>
+          <h2>병원이 문닫은 시간</h2>
+          <h2>00시~00시 사이,</h2>
+          <h2>전문의가 직접 찾아갑니다.</h2>
+        </div>
+      </v-flex>
+    </v-layout>
 
-    <div class="pl-4 pr-4 pt-3 pb-3">
-      <slot>No slot content defined.</slot>
-    </div>
+    <v-layout mt-3>
+      <h4>대표 의료진</h4>
+    </v-layout>
+
+    <v-layout>
+      <v-avatar size="100px">
+        <img src="@/assets/sample_avatar.jpg">
+      </v-avatar>
+    </v-layout>
+
+    <v-layout mt-4>
+      <v-btn dark large @click="pressReserve">예약하기</v-btn>
+    </v-layout>
   </div>
 </template>
 
@@ -16,11 +35,47 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isUserLoggedIn: true
+    };
+  },
   async mounted() {
     console.log("Landing.vue mounted()");
+  },
+  methods: {
+    navigateTo(route) {
+      this.$router.push(route);
+    },
+    pressReserve() {
+      if (this.isUserLoggedIn) {
+        console.log("DEBUG: navigateTo({ name: reservation }");
+        // navigateTo({ name: "reservation" });
+      } else {
+        console.log("DEBUG: navigateTo({ name: login }");
+        // navigateTo({ name: "login" });
+      }
+    }
   }
 };
 </script>
 
 <style scoped>
+#div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
 </style>
