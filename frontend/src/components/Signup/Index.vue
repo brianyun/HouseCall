@@ -27,10 +27,16 @@
       </v-flex>
 
       <address/>
+      <health-info/>
+      <payment/>
 
-      <!-- <health-info/>
+      <v-flex>
+        <v-btn outline="true" @click="addFamily">가족 추가하기 (+)</v-btn>
+      </v-flex>
 
-      <payment/>-->
+      <v-flex>
+        <v-btn color="blue" outline="true" @click="pressComplete">가입완료</v-btn>
+      </v-flex>
     </v-layout>
   </div>
 </template>
@@ -52,6 +58,18 @@ export default {
     Address,
     HealthInfo,
     Payment
+  },
+  methods: {
+    navigateTo(route) {
+      this.$router.push(route);
+    },
+    addFamily() {
+      console.log("DEBUG: addFamily()");
+    },
+    pressComplete() {
+      console.log("DEBUG: pressComplete()");
+      // this.navigateTo({ name: "signup" });
+    }
   }
 };
 </script>

@@ -28,8 +28,8 @@ export default {
       console.log("method.root() is toggled");
     },
     login() {
-      navigateTo({ name: "signup" });
-      // console.log("method.login() is toggled");
+      console.log("method.login() is toggled");
+      this.navigateTo({ name: "signup" });
     }
   }
 };

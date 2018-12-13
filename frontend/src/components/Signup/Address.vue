@@ -1,5 +1,5 @@
 <template>
-  <v-layout column>
+  <v-layout column mt-4>
     <v-flex mt-4>
       <h3>주소</h3>
     </v-flex>
@@ -10,7 +10,8 @@
       </v-flex>
 
       <v-flex xs3>
-        <v-dialog v-model="dialog">
+        <v-btn outline="true" @click="addressNumber">우편번호</v-btn>
+        <!-- <v-dialog v-model="dialog">
           <v-btn slot="activator" color="red lighten-2" dark>Click Me</v-btn>
 
           <v-card>
@@ -25,9 +26,13 @@
               <v-btn color="primary" flat @click="dialog = false">I accept</v-btn>
             </v-card-actions>
           </v-card>
-        </v-dialog>
+        </v-dialog>-->
       </v-flex>
     </v-layout>
+
+    <v-flex>
+      <v-text-field placeholder="나머지 주소를 기입하세요." solo></v-text-field>
+    </v-flex>
   </v-layout>
 </template>
 
