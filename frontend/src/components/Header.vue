@@ -29,7 +29,7 @@ export default {
     },
     login() {
       console.log("method.login() is toggled");
-      this.navigateTo({ name: "signup" });
+      this.navigateTo({ name: "login_or_signup" });
     }
   }
 };
