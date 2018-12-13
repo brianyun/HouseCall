@@ -21,11 +21,15 @@
 <script>
 export default {
   methods: {
+    navigateTo(route) {
+      this.$router.push(route);
+    },
     root() {
       console.log("method.root() is toggled");
     },
     login() {
-      console.log("method.login() is toggled");
+      navigateTo({ name: "signup" });
+      // console.log("method.login() is toggled");
     }
   }
 };

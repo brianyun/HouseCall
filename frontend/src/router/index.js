@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import Landing from "@/components/Landing";
-import Signup from "@/components/Signup";
+import Signup from "@/components/Signup/Index";
 
 Vue.use(Router);
 

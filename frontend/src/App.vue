@@ -29,7 +29,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* margin-top: 48px; */
+  margin-top: 48px;
 }
 
 .input-group--text-field input {
