@@ -1,23 +1,77 @@
 <template>
-  <v-toolbar fixed class="grey darken-1" dark ma-0 pa-0 id="toolbar">
-    <v-toolbar-side-icon></v-toolbar-side-icon>
+  <div>
+    <v-toolbar fixed class="grey darken-1" dark ma-0 pa-0 id="toolbar">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 
-    <v-btn ma-0 pa-0 flat @click="root">LOGO</v-btn>
+      <v-btn ma-0 pa-0 flat @click="root">LOGO</v-btn>
 
-    <!-- <v-img src="@/assets/sev_logo.jpg" height="48px"></v-img> -->
-    <!-- <v-toolbar-items>
-      <v-img src="@/assets/sev_logo.jpg"></v-img>
-    </v-toolbar-items>-->
-    <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
 
-    <v-toolbar-items>
-      <v-btn flat dark @click="login">로그인</v-btn>
-    </v-toolbar-items>
-  </v-toolbar>
+      <v-toolbar-items>
+        <v-btn flat dark @click="login">로그인</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <!-- <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="https://randomuser.me/api/portraits/men/85.jpg">
+          </v-list-tile-avatar>
+
+          <v-list-tile-content>
+            <v-list-tile-title>John Leider</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>-->
+      <v-list class="pt-0" dense>
+        <v-divider></v-divider>
+
+        <v-list-tile v-for="item in items" :key="item.eigen" @click.native="select(item.eigen)">
+          <v-list-tile-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-tile-action>
+
+          <v-list-tile-content>
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+
+      <v-list class="pa-1" mt-4 dense>
+        <v-divider></v-divider>
+        <v-list-tile @click="logout">
+          <v-list-tile-action>
+            <v-icon>exit_to_app</v-icon>
+          </v-list-tile-action>
+
+          <v-list-tile-content>
+            <v-list-tile-title>로그아웃</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      drawer: null,
+      items: [
+        { title: "개인정보 수정", icon: "edit", eigen: "signup_patient" },
+        { title: "예약 확인", icon: "list", eigen: "show_reservation" },
+        {
+          title: "나의 간호기록",
+          icon: "calendar_today",
+          eigen: "show_history"
+        }
+      ],
+      mini: false,
+      right: null
+    };
+  },
   methods: {
     navigateTo(route) {
       this.$router.push(route);
@@ -29,6 +83,13 @@ export default {
     login() {
       console.log("method.login() is toggled");
       this.navigateTo({ name: "login_or_signup" });
+    },
+    logout() {
+      console.log("DEBUG: Log Out");
+    },
+    select(obj) {
+      console.log(obj);
+      this.navigateTo({ name: obj });
     }
   }
 };

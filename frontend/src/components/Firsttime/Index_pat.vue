@@ -1,19 +1,20 @@
 <template>
   <div>
     <v-layout column mt-4 ml-4 mr-4>
-      <v-flex xs10>
-        <p>원활한 진료를 위한</p>
-        <p>추가 정보가 필요합니다.</p>
+      <v-flex xs10 mt-4>
+        <p style="text-align: left;">원활한 진료를 위한</p>
+        <p style="text-align: left; font-weight: 800; transform: translateY(-50%); ;">추가 정보가 필요합니다.</p>
       </v-flex>
+      <div class="blank-4"></div>
 
       <v-flex>
         <p class="tags">이름</p>
       </v-flex>
       <v-flex xs10>
-        <v-text-field placeholder="나머지 주소를 기입하세요." solo flat></v-text-field>
+        <v-text-field solo flat></v-text-field>
       </v-flex>
 
-      <v-flex mt-4></v-flex>
+      <div class="blank-4"></div>
       <birth-date/>
 
       <v-flex mt-4>
@@ -30,16 +31,13 @@
         <v-text-field placeholder solo flat></v-text-field>
       </v-flex>
 
-      <v-flex mt-4></v-flex>
-      <v-flex mt-4></v-flex>
+      <div class="blank-8"></div>
       <addressss/>
 
-      <v-flex mt-4></v-flex>
-      <v-flex mt-4></v-flex>
+      <div class="blank-8"></div>
       <health-info/>
 
-      <v-flex mt-4></v-flex>
-      <v-flex mt-4></v-flex>
+      <div class="blank-8"></div>
       <payment/>
 
       <v-flex mt-4></v-flex>
@@ -50,6 +48,7 @@
       <v-flex mt-2>
         <v-btn color="blue" outline @click="pressComplete">가입완료</v-btn>
       </v-flex>
+      <div class="blank-8"></div>
     </v-layout>
   </div>
 </template>
@@ -101,5 +100,12 @@ export default {
 
 p {
   font-size: 18px;
+}
+
+.blank-4 {
+  height: 40px;
+}
+.blank-8 {
+  height: 80px;
 }
 </style>
