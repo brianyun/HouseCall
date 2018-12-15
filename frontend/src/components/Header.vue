@@ -3,7 +3,7 @@
     <v-toolbar fixed class="grey darken-1" dark ma-0 pa-0 id="toolbar">
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 
-      <v-btn ma-0 pa-0 flat @click="root">LOGO</v-btn>
+      <v-btn ma-0 pa-0 flat @click="root">하우스콜</v-btn>
 
       <v-spacer></v-spacer>
 
