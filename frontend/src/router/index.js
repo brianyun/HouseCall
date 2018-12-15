@@ -7,11 +7,23 @@ import Signup_doc from "@/components/Firsttime/Index_doc";
 import LoginOrSignup from "@/components/Login/LoginOrSignup";
 import PatOrDoc from "@/components/Login/PatOrDoc";
 import Timetable from "@/components/Firsttime/Timetable";
+import Stack from "@/components/TakeReservation/Stack";
+import Specific from "@/components/TakeReservation/Specific";
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
+    {
+      path: "/doctor/reservation",
+      name: "doc_reservation",
+      component: Stack
+    },
+    {
+      path: "/doctor/reservation/:id",
+      name: "doc_reservation_specific",
+      component: Specific
+    },
     {
       path: "/signup/patient",
       name: "signup_patient",
