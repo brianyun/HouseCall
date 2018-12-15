@@ -2,34 +2,47 @@
   <div>
     <v-layout column mt-4 ml-4 mr-4>
       <v-flex xs10>
-        <h3>원활한 진료를 위한</h3>
-        <h3>추가 정보가 필요합니다.</h3>
+        <p>원활한 진료를 위한</p>
+        <p>추가 정보가 필요합니다.</p>
       </v-flex>
 
+      <v-flex>
+        <p class="tags">이름</p>
+      </v-flex>
       <v-flex xs10>
-        <v-text-field label="이름"></v-text-field>
+        <v-text-field placeholder="나머지 주소를 기입하세요." solo flat></v-text-field>
       </v-flex>
 
+      <v-flex mt-4></v-flex>
       <birth-date/>
 
       <v-flex mt-4>
-        <h3>성별</h3>
+        <p class="tags">성별</p>
       </v-flex>
       <v-flex xs6>
         <v-select :items="items_gender" label="선택 안함" solo flat></v-select>
       </v-flex>
 
       <v-flex mt-4>
-        <h3>연락처</h3>
+        <p class="tags">연락처</p>
       </v-flex>
       <v-flex xs10>
-        <v-text-field></v-text-field>
+        <v-text-field placeholder solo flat></v-text-field>
       </v-flex>
 
+      <v-flex mt-4></v-flex>
+      <v-flex mt-4></v-flex>
       <addressss/>
+
+      <v-flex mt-4></v-flex>
+      <v-flex mt-4></v-flex>
       <health-info/>
+
+      <v-flex mt-4></v-flex>
+      <v-flex mt-4></v-flex>
       <payment/>
 
+      <v-flex mt-4></v-flex>
       <v-flex mt-5>
         <v-btn outline @click="addFamily">가족 추가하기 (+)</v-btn>
       </v-flex>
@@ -75,9 +88,18 @@ export default {
 </script>
 
 <style scoped>
-.v-select {
+.v-select,
+.v-text-field {
   border: 1px solid currentColor;
   border-color: #999999;
   height: 50px;
+}
+
+.tags {
+  text-align: left;
+}
+
+p {
+  font-size: 18px;
 }
 </style>

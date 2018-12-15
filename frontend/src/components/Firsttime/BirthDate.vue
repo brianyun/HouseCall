@@ -1,7 +1,7 @@
 <template>
   <v-layout column>
-    <v-flex mt-4>
-      <h3>생년월일</h3>
+    <v-flex>
+      <p class="tags">생년월일</p>
     </v-flex>
 
     <v-layout row justify-space-between>
@@ -30,5 +30,12 @@ export default {};
   border: 1px solid currentColor;
   border-color: #999999;
   height: 50px;
+}
+.tags {
+  text-align: left;
+}
+
+p {
+  font-size: 18px;
 }
 </style>

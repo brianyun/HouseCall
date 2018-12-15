@@ -1,7 +1,7 @@
 <template>
-  <v-layout column mt-4>
-    <v-flex mt-4>
-      <h3>결제정보</h3>
+  <v-layout column>
+    <v-flex>
+      <p class="tags">결제정보</p>
     </v-flex>
 
     <v-flex xs10>
@@ -9,72 +9,72 @@
     </v-flex>
 
     <v-layout row justify-start mt-2>
-      <v-flex xs3>
-        <h3>카드번호</h3>
+      <v-flex xs3 class="indexes">
+        <p>카드번호</p>
       </v-flex>
-      <v-flex xs3>
+      <v-flex class="card_no">
         <v-text-field solo flat></v-text-field>
       </v-flex>
-      <v-flex xs3>
+      <v-flex class="card_no">
         <v-text-field solo flat></v-text-field>
       </v-flex>
-      <v-flex xs3>
+      <v-flex class="card_no">
         <v-text-field solo flat></v-text-field>
       </v-flex>
-      <v-flex xs3>
+      <v-flex class="card_no">
         <v-text-field solo flat></v-text-field>
       </v-flex>
     </v-layout>
 
     <v-layout row justify-start mt-2>
       <v-flex xs3>
-        <h3>유효기간</h3>
+        <p>유효기간</p>
       </v-flex>
 
-      <v-flex xs3>
+      <v-flex xs2>
         <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs1>
-        <h3>월</h3>
+        <p>월</p>
       </v-flex>
 
-      <v-flex xs3>
+      <v-flex xs2>
         <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs1>
-        <h3>년</h3>
+        <p>년</p>
       </v-flex>
     </v-layout>
 
     <v-layout row justify-start mt-2>
       <v-flex xs3>
-        <h3>비밀번호</h3>
+        <p>비밀번호</p>
       </v-flex>
 
-      <v-flex xs3>
+      <v-flex xs2>
         <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs1>
-        <h3>**</h3>
+        <p>**</p>
       </v-flex>
     </v-layout>
 
-    <v-layout row justify-start mt-2>
+    <v-layout row justify-start>
       <v-flex xs3>
-        <h3>카드종류</h3>
+        <p>카드종류</p>
       </v-flex>
 
-      <v-radio-group v-model="row" row>
+      <v-radio-group v-model="row" row ma-0 pa-0>
         <v-radio label="일반" value="radio-1"></v-radio>
         <v-radio label="법인" value="radio-2"></v-radio>
       </v-radio-group>
     </v-layout>
 
-    <v-layout row justify-start mt-2>
+    <v-layout row justify-start>
       <v-flex xs3>
-        <h3>할부기간</h3>
+        <p>할부기간</p>
       </v-flex>
-      <v-flex xs10>
+      <v-flex xs8>
         <v-select :items="items_halbu" solo flat></v-select>
       </v-flex>
     </v-layout>
@@ -98,5 +98,15 @@ export default {
   border: 1px solid currentColor;
   border-color: #999999;
   height: 50px;
+}
+.tags {
+  text-align: left;
+}
+.card_no {
+  width: 60px;
+}
+
+p {
+  font-size: 18px;
 }
 </style>
