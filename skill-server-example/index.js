@@ -51,6 +51,7 @@ apiRouter.post('/showHello', function(req, res) {
 
 apiRouter.post('/commerceCardTest', function(req, res){
     console.log(req.body);
+    console.log(req.query)
     const responseBody = {
         version: "2.0",
         template: {
