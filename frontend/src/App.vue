@@ -35,4 +35,10 @@ export default {
 .input-group--text-field input {
   border-bottom: 1px solid black;
 }
+
+router-view {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
