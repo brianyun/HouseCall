@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: white;" id="iid">
+  <div style="background-color: white;">
     <v-layout>
       <img src="@/assets/landing/landing.png">
     </v-layout>
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style scoped>
-#iid {
+* {
   display: block;
   margin-left: auto;
   margin-right: auto;
