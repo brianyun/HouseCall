@@ -51,7 +51,6 @@ apiRouter.post('/showHello', function(req, res) {
 
 apiRouter.post('/commerceCardTest', function(req, res){
     console.log(req.body);
-    console.log(req.query)
     const responseBody = {
         version: "2.0",
         template: {
@@ -61,7 +60,7 @@ apiRouter.post('/commerceCardTest', function(req, res){
                 description: "따끈따끈한 보물 상자 팝니다",
                 price: 10000,
                 discount: 1000,
-                currency: "won",
+                currency: "won",  
                 thumbnails: [
                   {
                     imageUrl: "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg",
