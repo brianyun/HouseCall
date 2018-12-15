@@ -3,7 +3,7 @@
     <v-layout column>
       <div class="blank-4"></div>
       <v-flex>
-        <img src="@/assets/takeReservation/res_stack_doc.png">
+        <img src="@/assets/nurse_index_guide.jpeg">
       </v-flex>
 
       <div class="blank-4"></div>
@@ -76,7 +76,7 @@ export default {
 }
 
 img {
-  max-width: 100%;
+  width: 300px;
   object-fit: cover;
 }
 .list {

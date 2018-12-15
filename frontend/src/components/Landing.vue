@@ -1,6 +1,12 @@
 <template>
   <div style="background-color: white;">
     <v-layout>
+      <v-btn xs12 block flat @click="pressReserve">
+        <img src="@/assets/cheat.png">
+      </v-btn>
+    </v-layout>
+
+    <!-- <v-layout>
       <img src="@/assets/landing/landing.png">
     </v-layout>
 
@@ -19,7 +25,7 @@
     <v-layout mt-4>
       <div style="height: 10px;"></div>
       <img src="@/assets/landing/landing_nurse.png">
-    </v-layout>
+    </v-layout>-->
   </div>
 </template>
 
@@ -52,11 +58,11 @@ export default {
 </script>
 
 <style scoped>
-* {
+/* * {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 img {
   max-width: 100%;
@@ -64,7 +70,7 @@ img {
   border: 3pt black;
 }
 
-.mainBtn {
+/* .mainBtn {
   font-size: 17px;
   font-weight: bolder;
 
@@ -80,5 +86,5 @@ img {
 }
 .btnDiv {
   transform: translateX(-25%);
-}
+} */
 </style>

@@ -3,9 +3,9 @@
     <v-layout column>
       <div class="blank-4"></div>
       <v-flex>
-        <img src="@/assets/history_index_guide.png">
+        <img src="@/assets/history_index_guide.jpeg">
       </v-flex>
-
+      <div style="height:20px;"></div>
       <div v-for="item in items" :key="item.id" @click="select(item.id)">
         <div class="blank-2"></div>
         <table class="list">
@@ -73,7 +73,7 @@ export default {
 }
 
 img {
-  max-width: 100%;
+  width: 300px;
   object-fit: cover;
 }
 .list {
