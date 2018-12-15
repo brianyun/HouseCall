@@ -41,7 +41,7 @@ export default {
     },
     pressReserve() {
       if (this.isUserLoggedIn) {
-        this.navigateTo({ name: "reservation" });
+        this.navigateTo({ name: "make" });
       } else {
         console.log("DEBUG: navigateTo({ name: login }");
         // navigateTo({ name: "login" });

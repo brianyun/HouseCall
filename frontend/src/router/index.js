@@ -11,7 +11,10 @@ import take_Stack from "@/components/TakeReservation/Stack";
 import take_Specific from "@/components/TakeReservation/Specific";
 import take_Complete from "@/components/TakeReservation/Complete";
 
-import make_Start from "@/components/MakeReservation/Start";
+import make_Describe from "@/components/MakeReservation/Describe";
+import make_Schedule from "@/components/MakeReservation/Schedule";
+import make_SelectNurse from "@/components/MakeReservation/SelectNurse";
+import make_Complete from "@/components/MakeReservation/Complete";
 
 import checkout_Index from "@/components/NurseHistory/Index";
 import checkout_Specific from "@/components/NurseHistory/Specific";
@@ -42,11 +45,28 @@ export default new Router({
       name: "nurse_checkout_payment",
       component: checkout_Payment
     },
+
     {
-      path: "/reservation",
-      name: "reservation",
-      component: make_Start
+      path: "/make",
+      name: "make",
+      component: make_Describe
     },
+    {
+      path: "/make/schedule",
+      name: "make_schedule",
+      component: make_Schedule
+    },
+    {
+      path: "/make/select",
+      name: "make_select_nurse",
+      component: make_SelectNurse
+    },
+    {
+      path: "/make/complete",
+      name: "make_complete",
+      component: make_Complete
+    },
+
     {
       path: "/take/reservation",
       name: "take_reservation",

@@ -3,25 +3,31 @@
     <v-layout column>
       <div class="blank-4"></div>
       <v-flex>
-        <img src="@/assets/makeReservation/make_schedule_guide.png">
+        <img src="@/assets/makeReservation/make_start_guide.png">
       </v-flex>
       <div class="blank-4"></div>
-      <div class="blank-4"></div>
 
-      <v-flex ml-3 mr-3>
-        <p class="tags">예약 일정 선택</p>
-      </v-flex>
-
-      <v-layout row ml-3 mr-3>
-        <v-flex style="width:135px;">
-          <v-select :items="items_date" label="날짜" solo flat></v-select>
+      <v-layout column ml-3 mr-3>
+        <v-flex>
+          <p class="tags">증상 설명</p>
         </v-flex>
-        <v-spacer></v-spacer>
-        <v-flex style="width:165px;">
-          <v-select :items="items_time" label="시간대" solo flat></v-select>
+
+        <v-flex xs10>
+          <v-textarea solo flat placeholder="현재 증상을 자세하게 기재해주세요."></v-textarea>
+        </v-flex>
+        <v-flex xs10 mt-2>
+          <v-text-field solo flat placeholder="복용 중인 약을 기재해주세요."></v-text-field>
         </v-flex>
       </v-layout>
-      <div class="blank-4"></div>
+
+      <div style="height:60px;"></div>
+      <v-flex>
+        <img src="@/assets/makeReservation/make_start_option.png">
+      </v-flex>
+      <v-radio-group v-model="row" row ma-0 class="radio" ml-3 mr-3>
+        <v-radio label="요양보호사만 만날래요." value="radio-1"></v-radio>
+        <v-radio label="의사도 만나고 싶습니다. (추가비용 발생)" value="radio-2"></v-radio>
+      </v-radio-group>
 
       <v-layout mt-4 justify-center>
         <v-btn class="mainBtn" color="#1675fa" outline @click="pressNext">
@@ -32,7 +38,6 @@
       </v-layout>
       <div class="blank-4"></div>
       <div class="blank-4"></div>
-      <div class="blank-4"></div>
     </v-layout>
   </div>
 </template>
@@ -41,35 +46,12 @@
 
 <script>
 export default {
-  data: () => ({
-    items_date: [
-      "12/16(일)",
-      "12/17(월)",
-      "12/18(화)",
-      "12/19(수)",
-      "12/20(목)",
-      "12/21(금)",
-      "12/22(토)"
-    ],
-    items_time: [
-      "오전 7:00-7:30",
-      "오전 7:30-8:00",
-      "오전 8:00-8:30",
-      "오전 8:30-9:00",
-      "오전 9:00-9:30",
-      "오전 9:30-10:00",
-      "오전 10:00-10:30",
-      "오전 10:30-11:00",
-      "오전 11:00-11:30",
-      "오전 11:30-12:00"
-    ]
-  }),
   methods: {
     navigateTo(route) {
       this.$router.push(route);
     },
     pressNext() {
-      this.navigateTo({ name: "make_select_nurse" });
+      this.navigateTo({ name: "make_schedule" });
     }
   }
 };
@@ -99,6 +81,11 @@ p {
 img {
   max-width: 100%;
   object-fit: cover;
+}
+.radio {
+  font-weight: 800;
+  padding: 10px;
+  transform: translate(5%, -20%);
 }
 
 .mainBtn {
