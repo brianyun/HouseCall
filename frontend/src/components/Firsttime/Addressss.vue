@@ -4,13 +4,13 @@
       <h3>주소</h3>
     </v-flex>
 
-    <v-layout row justify-space-between ml-2 mr-2>
+    <v-layout row>
       <v-flex xs8>
-        <v-text-field placeholder solo></v-text-field>
+        <v-text-field placeholder solo flat></v-text-field>
       </v-flex>
-
+      <v-spacer/>
       <v-flex xs3>
-        <v-btn outline="true" @click="addressNumber">우편번호</v-btn>
+        <v-btn outline @click="addressNumber">우편번호</v-btn>
         <!-- <v-dialog v-model="dialog">
           <v-btn slot="activator" color="red lighten-2" dark>Click Me</v-btn>
 
@@ -31,7 +31,7 @@
     </v-layout>
 
     <v-flex>
-      <v-text-field placeholder="나머지 주소를 기입하세요." solo></v-text-field>
+      <v-text-field placeholder="나머지 주소를 기입하세요." solo flat></v-text-field>
     </v-flex>
   </v-layout>
 </template>
@@ -39,8 +39,20 @@
 
 
 <script>
-export default {};
+export default {
+  methods: {
+    addressNumber() {
+      console.log("press AddressNumber");
+    }
+  }
+};
 </script>
 
 <style scoped>
+.v-text-field,
+.v-btn {
+  border: 1px solid currentColor;
+  border-color: #999999;
+  height: 50px;
+}
 </style>

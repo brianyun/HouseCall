@@ -5,61 +5,61 @@
     </v-flex>
 
     <v-flex xs10>
-      <v-select :items="items_payment" label="카드사 선택" outline></v-select>
+      <v-select :items="items_payment" label="카드사 선택" solo flat></v-select>
     </v-flex>
 
-    <v-layout row justify-space-between>
+    <v-layout row justify-start mt-2>
       <v-flex xs3>
         <h3>카드번호</h3>
       </v-flex>
       <v-flex xs3>
-        <v-text-field solo></v-text-field>
+        <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs3>
-        <v-text-field solo></v-text-field>
+        <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs3>
-        <v-text-field solo></v-text-field>
+        <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs3>
-        <v-text-field solo></v-text-field>
+        <v-text-field solo flat></v-text-field>
       </v-flex>
     </v-layout>
 
-    <v-layout row justify-space-between>
+    <v-layout row justify-start mt-2>
       <v-flex xs3>
         <h3>유효기간</h3>
       </v-flex>
 
       <v-flex xs3>
-        <v-text-field solo></v-text-field>
+        <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs1>
         <h3>월</h3>
       </v-flex>
 
       <v-flex xs3>
-        <v-text-field solo></v-text-field>
+        <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs1>
         <h3>년</h3>
       </v-flex>
     </v-layout>
 
-    <v-layout row justify-space-between>
+    <v-layout row justify-start mt-2>
       <v-flex xs3>
         <h3>비밀번호</h3>
       </v-flex>
 
       <v-flex xs3>
-        <v-text-field solo></v-text-field>
+        <v-text-field solo flat></v-text-field>
       </v-flex>
       <v-flex xs1>
         <h3>**</h3>
       </v-flex>
     </v-layout>
 
-    <v-layout row justify-space-between>
+    <v-layout row justify-start mt-2>
       <v-flex xs3>
         <h3>카드종류</h3>
       </v-flex>
@@ -70,12 +70,12 @@
       </v-radio-group>
     </v-layout>
 
-    <v-layout row justify-space-between>
+    <v-layout row justify-start mt-2>
       <v-flex xs3>
         <h3>할부기간</h3>
       </v-flex>
       <v-flex xs10>
-        <v-select :items="items_halbu" outline></v-select>
+        <v-select :items="items_halbu" solo flat></v-select>
       </v-flex>
     </v-layout>
   </v-layout>
@@ -93,4 +93,10 @@ export default {
 </script>
 
 <style scoped>
+.v-select,
+.v-text-field {
+  border: 1px solid currentColor;
+  border-color: #999999;
+  height: 50px;
+}
 </style>

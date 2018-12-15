@@ -27,7 +27,7 @@ export default new Router({
       component: LoginOrSignup
     },
     {
-      path: "/select",
+      path: "/signup/select",
       name: "pat_or_doc_select",
       component: PatOrDoc
     },

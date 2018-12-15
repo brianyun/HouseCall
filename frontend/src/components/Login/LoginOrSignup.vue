@@ -1,11 +1,11 @@
 <template>
   <div>
     <v-layout class="imagee">
-      <img src="@/assets/grey_img.svg">
-      <div class="centered">
+      <img src="@/assets/signup.png">
+      <!-- <div class="centered">
         <h1>환자에게 더 가까이</h1>
         <h3>하우스콜에서 보다 나은 의료서비스를 경험하세요.</h3>
-      </div>
+      </div>-->
     </v-layout>
 
     <v-layout column mt-5>
@@ -30,7 +30,16 @@
 
 
 <script>
-export default {};
+export default {
+  methods: {
+    navigateTo(route) {
+      this.$router.push(route);
+    },
+    pressSignup() {
+      this.navigateTo({ name: "pat_or_doc_select" });
+    }
+  }
+};
 </script>
 
 <style scoped>

@@ -16,26 +16,26 @@
         <h3>성별</h3>
       </v-flex>
       <v-flex xs6>
-        <v-select :items="items_gender" label="선택 안함" outline></v-select>
+        <v-select :items="items_gender" label="선택 안함" solo flat></v-select>
       </v-flex>
 
-      <v-flex>
+      <v-flex mt-4>
         <h3>연락처</h3>
       </v-flex>
       <v-flex xs10>
         <v-text-field></v-text-field>
       </v-flex>
 
-      <address/>
+      <addressss/>
       <health-info/>
       <payment/>
 
-      <v-flex>
-        <v-btn outline="true" @click="addFamily">가족 추가하기 (+)</v-btn>
+      <v-flex mt-5>
+        <v-btn outline @click="addFamily">가족 추가하기 (+)</v-btn>
       </v-flex>
 
-      <v-flex>
-        <v-btn color="blue" outline="true" @click="pressComplete">가입완료</v-btn>
+      <v-flex mt-2>
+        <v-btn color="blue" outline @click="pressComplete">가입완료</v-btn>
       </v-flex>
     </v-layout>
   </div>
@@ -45,7 +45,7 @@
 
 <script>
 import BirthDate from "./BirthDate";
-import Address from "./Address";
+import Addressss from "./Addressss";
 import HealthInfo from "./HealthInfo";
 import Payment from "./Payment";
 
@@ -55,7 +55,7 @@ export default {
   }),
   components: {
     BirthDate,
-    Address,
+    Addressss,
     HealthInfo,
     Payment
   },
@@ -75,4 +75,9 @@ export default {
 </script>
 
 <style scoped>
+.v-select {
+  border: 1px solid currentColor;
+  border-color: #999999;
+  height: 50px;
+}
 </style>

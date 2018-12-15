@@ -26,7 +26,7 @@
         <v-text-field></v-text-field>
       </v-flex>
 
-      <address/>
+      <addressss/>
       <health-info/>
       <payment/>
 
@@ -45,7 +45,7 @@
 
 <script>
 import BirthDate from "./BirthDate";
-import Address from "./Address";
+import Addressss from "./Addressss";
 import HealthInfo from "./HealthInfo";
 import Payment from "./Payment";
 
@@ -55,7 +55,7 @@ export default {
   }),
   components: {
     BirthDate,
-    Address,
+    Addressss,
     HealthInfo,
     Payment
   },

@@ -2,7 +2,7 @@
   <div>
     <v-layout>
       <!-- <img src="@/assets/doctor_img.jpg"> -->
-      <img src="@/assets/grey_img.svg">
+      <img src="@/assets/landing.png">
     </v-layout>
 
     <v-layout mt-3>
@@ -77,5 +77,6 @@ export default {
 img {
   max-width: 100%;
   object-fit: cover;
+  border: 3pt black;
 }
 </style>
