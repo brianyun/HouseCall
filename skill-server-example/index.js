@@ -93,17 +93,17 @@ apiRouter.post('/reservationList', function(req, res) {
                       {
                         "action": "webLink",
                         "label": "돌봄 자세히 보기",
-                        "webLinkUrl": "http://creamheroes.com"
+                        "webLinkUrl": "http://housecall.genax.tools/#/nurse/checkout"
                       },
                       {
                         "action": "webLink",
                         "label": "돌봄 경험 기록하기",
-                        "webLinkUrl": "http://creamheroes.com"
+                        "webLinkUrl": "http://http://housecall.genax.tools/#/nurse/checkout/1"
                       },
                       {
                         "action": "webLink",
                         "label": "돌봄 기록 확인하기",
-                        "webLinkUrl": "http://creamheroes.com"
+                        "webLinkUrl": "http://housecall.genax.tools/#/nurse/checkout"
                       }
                     ]
                   },
@@ -118,7 +118,7 @@ apiRouter.post('/reservationList', function(req, res) {
                       {
                         "action": "webLink",
                         "label": "돌봄 자세히 보기",
-                        "webLinkUrl": "https://www.google.com/maps/dir/37.5807878,127.0002427/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EC%84%B1%EB%B6%81%EA%B5%AC+%EB%8F%99%EC%84%A0%EB%8F%99+84-64/@37.5825985,126.9988092,13.94z/data=!4m9!4m8!1m0!1m5!1m1!1s0x357cbcbe8ef46f33:0xacc5e5065f8fd8!2m2!1d127.0230212!2d37.5934493!3e3?hl=ko"
+                        "webLinkUrl": "http://housecall.genax.tools/#/nurse/checkout"
                       },
                       {
                         "action": "webLink",
@@ -143,7 +143,7 @@ apiRouter.post('/reservationList', function(req, res) {
                       {
                         "action": "webLink",
                         "label": "돌봄 자세히 보기",
-                        "webLinkUrl": "http://creamheroes.com"
+                        "webLinkUrl": "http://housecall.genax.tools/#/nurse/checkout"
                       },
                       {
                         "action": "message",
@@ -190,7 +190,7 @@ apiRouter.post('/commerceCardTest', function(req, res) {
                       {
                         "action": "webLink",
                         "label": "자세히 보기",
-                        "webLinkUrl": "www.naver.com"
+                        "webLinkUrl": "http://housecall.genax.tools/#/"
                       }
                     ]
                   },
@@ -210,7 +210,7 @@ apiRouter.post('/commerceCardTest', function(req, res) {
                       {
                         "action": "webLink",
                         "label": "자세히 보기",
-                        "webLinkUrl": "www.naver.com"
+                        "webLinkUrl": "http://housecall.genax.tools/#/"
                       }
                     ]
                   },
@@ -230,7 +230,7 @@ apiRouter.post('/commerceCardTest', function(req, res) {
                       {
                         "action": "webLink",
                         "label": "자세히 보기",
-                        "webLinkUrl": "www.naver.com"
+                        "webLinkUrl": "http://housecall.genax.tools/#/"
                       }
                     ]
                   }
@@ -315,7 +315,7 @@ apiRouter.post('/historyList', function(req, res){
                       {
                         "action": "webLink",
                         "label": "나의 돌봄 자세히 보기",
-                        "webLinkUrl": "https://www.google.com/maps/dir/37.5807878,127.0002427/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EC%84%B1%EB%B6%81%EA%B5%AC+%EB%8F%99%EC%84%A0%EB%8F%99+84-64/@37.5825985,126.9988092,13.94z/data=!4m9!4m8!1m0!1m5!1m1!1s0x357cbcbe8ef46f33:0xacc5e5065f8fd8!2m2!1d127.0230212!2d37.5934493!3e3?hl=ko"
+                        "webLinkUrl": "http://housecall.genax.tools/#/history"
                       },
                       {
                         "action": "message",
