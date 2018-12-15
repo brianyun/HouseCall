@@ -9,6 +9,7 @@ import PatOrDoc from "@/components/Login/PatOrDoc";
 import Timetable from "@/components/Firsttime/Timetable";
 import Stack from "@/components/TakeReservation/Stack";
 import Specific from "@/components/TakeReservation/Specific";
+import Complete from "@/components/TakeReservation/Complete";
 
 Vue.use(Router);
 
@@ -23,6 +24,11 @@ export default new Router({
       path: "/doctor/reservation/:id",
       name: "doc_reservation_specific",
       component: Specific
+    },
+    {
+      path: "/doctor/reservation/complete",
+      name: "doc_reservation_complete",
+      component: Complete
     },
     {
       path: "/signup/patient",

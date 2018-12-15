@@ -58,8 +58,12 @@ export default {
     };
   },
   methods: {
+    navigateTo(route) {
+      this.$router.push(route);
+    },
     select(obj) {
       console.log(obj);
+      this.navigateTo({ path: "/doctor/reservation/" + obj });
     }
   }
 };

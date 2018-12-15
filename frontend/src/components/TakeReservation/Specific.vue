@@ -48,15 +48,20 @@ export default {
     };
   },
   methods: {
+    navigateTo(route) {
+      this.$router.push(route);
+    },
     pressYes() {
       console.log("DEBUG: pressYes()");
+      this.navigateTo({ name: "doc_reservation_complete" });
     },
     pressNo() {
       console.log("DEBUG: pressNo()");
+      this.navigateTo({ name: "doc_reservation" });
     }
   },
   async mounted() {
-    const patientId = this.$router.state.params.id;
+    const patientId = this.$route.params.id;
     console.log("DEBUG-mounted: id is:(" + patientId + ")");
   }
 };
@@ -70,12 +75,6 @@ export default {
 img {
   max-width: 100%;
   object-fit: cover;
-}
-.list {
-  height: 90px;
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #444444;
 }
 
 td {
