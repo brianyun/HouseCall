@@ -1,8 +1,10 @@
 <template>
   <div>
     <v-layout column>
+      <div class="blank-4"></div>
       <v-flex>
-        <img src="@/assets/takeReservation/res_specific_guide.png">
+        <!-- <img src="@/assets/takeReservation/res_specific_guide.png"> -->
+        <h2>간호활동이 완료되었나요?</h2>
       </v-flex>
 
       <div class="blank-4"></div>
@@ -53,11 +55,11 @@ export default {
     },
     pressYes() {
       console.log("DEBUG: pressYes()");
-      this.navigateTo({ name: "take_reservation_complete" });
+      this.navigateTo({ name: "nurse_checkout_memo" });
     },
     pressNo() {
       console.log("DEBUG: pressNo()");
-      this.navigateTo({ name: "take_reservation" });
+      this.navigateTo({ name: "nurse_checkout" });
     }
   },
   async mounted() {

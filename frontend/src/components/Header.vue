@@ -61,11 +61,16 @@ export default {
       drawer: null,
       items: [
         { title: "개인정보 수정", icon: "edit", eigen: "signup_patient" },
-        { title: "예약 확인", icon: "list", eigen: "doc_reservation" },
+        { title: "예약 확인", icon: "list", eigen: "take_reservation" },
         {
-          title: "나의 간호기록",
-          icon: "calendar_today",
-          eigen: "show_history"
+          title: "나의 돌봄기록",
+          icon: "person",
+          eigen: "nurse_checkout"
+        },
+        {
+          title: "치료받은 기록",
+          icon: "airline_seat_individual_suite",
+          eigen: "patient_history"
         }
       ],
       mini: false,

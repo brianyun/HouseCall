@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: white;">
     <v-layout column>
       <div class="blank-4"></div>
       <v-flex>
@@ -8,9 +8,13 @@
 
       <div class="blank-4"></div>
       <v-flex>
-        <img src="@/assets/takeReservation/res_select_guide.png">
+        <!-- <img src="@/assets/takeReservation/res_select_guide.png"> -->
+        <div class="blue">
+          <p>완료한 환자를 선택해주세요.</p>
+        </div>
       </v-flex>
 
+      <div class="blank-2"></div>
       <div v-for="item in items" :key="item.id" @click="select(item.id)">
         <div class="blank-2"></div>
         <table class="list">
@@ -47,12 +51,6 @@ export default {
           info: "남(77세)/강동구",
           disease: "당뇨",
           schedule: "12/16(일) 8:00PM~8:30PM"
-        },
-        {
-          id: "2",
-          info: "여(84세)/마포구",
-          disease: "고혈압",
-          schedule: "12/16(일) 7:00AM~7:30AM"
         }
       ]
     };
@@ -63,7 +61,7 @@ export default {
     },
     select(obj) {
       console.log(obj);
-      this.navigateTo({ path: "/take/reservation/" + obj });
+      this.navigateTo({ path: "/nurse/checkout/" + obj });
     }
   }
 };
@@ -92,5 +90,19 @@ td {
   height: 30px;
   font-size: 18px;
   padding: 10px;
+}
+
+.blue {
+  width: 100%;
+  height: 41px;
+  background-color: #1675fa;
+}
+p {
+  width: 176px;
+  height: 22px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  transform: translate(60%, 50%);
 }
 </style>

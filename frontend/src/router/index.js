@@ -10,30 +10,56 @@ import Timetable from "@/components/Firsttime/Timetable";
 import take_Stack from "@/components/TakeReservation/Stack";
 import take_Specific from "@/components/TakeReservation/Specific";
 import take_Complete from "@/components/TakeReservation/Complete";
+
 import make_Start from "@/components/MakeReservation/Start";
+
+import checkout_Index from "@/components/NurseHistory/Index";
+import checkout_Specific from "@/components/NurseHistory/Specific";
+import checkout_Memo from "@/components/NurseHistory/Memo";
+import checkout_Payment from "@/components/NurseHistory/Payment";
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
+      path: "/nurse/checkout",
+      name: "nurse_checkout",
+      component: checkout_Index
+    },
+    {
+      path: "/nurse/checkout/memo",
+      name: "nurse_checkout_memo",
+      component: checkout_Memo
+    },
+    {
+      path: "/nurse/checkout/:id",
+      name: "nurse_checkout_specific",
+      component: checkout_Specific
+    },
+    {
+      path: "/nurse/checkout/payment",
+      name: "nurse_checkout_payment",
+      component: checkout_Payment
+    },
+    {
       path: "/reservation",
       name: "reservation",
       component: make_Start
     },
     {
-      path: "/doctor/reservation",
-      name: "doc_reservation",
+      path: "/take/reservation",
+      name: "take_reservation",
       component: take_Stack
     },
     {
-      path: "/doctor/reservation/:id",
-      name: "doc_reservation_specific",
+      path: "/take/reservation/:id",
+      name: "take_reservation_specific",
       component: take_Specific
     },
     {
-      path: "/doctor/reservation/complete",
-      name: "doc_reservation_complete",
+      path: "/take/reservation/complete",
+      name: "take_reservation_complete",
       component: take_Complete
     },
     {
