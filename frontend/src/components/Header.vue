@@ -70,7 +70,7 @@ export default {
         {
           title: "치료받은 기록",
           icon: "airline_seat_individual_suite",
-          eigen: "patient_history"
+          eigen: "history"
         }
       ],
       mini: false,

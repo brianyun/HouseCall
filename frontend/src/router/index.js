@@ -21,6 +21,9 @@ import checkout_Specific from "@/components/NurseHistory/Specific";
 import checkout_Memo from "@/components/NurseHistory/Memo";
 import checkout_Payment from "@/components/NurseHistory/Payment";
 
+import history_Index from "@/components/PatientHistory/Index";
+import history_Specific from "@/components/PatientHistory/Specific";
+
 Vue.use(Router);
 
 export default new Router({
@@ -44,6 +47,17 @@ export default new Router({
       path: "/nurse/checkout/payment",
       name: "nurse_checkout_payment",
       component: checkout_Payment
+    },
+
+    {
+      path: "/history",
+      name: "history",
+      component: history_Index
+    },
+    {
+      path: "/history/:id",
+      name: "history_specific",
+      component: history_Specific
     },
 
     {

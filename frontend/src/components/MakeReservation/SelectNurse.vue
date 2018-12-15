@@ -7,19 +7,28 @@
     </v-layout>
 
     <div style="height:80px"></div>
-    <div v-for="item in items" :key="item.id" @click="select(item.id)">
-      <v-layout column>
+    <div>
+      <v-layout column ml-4 mr-4>
         <v-layout row justify-space-between>
-          <v-btn xs3>왼쪽</v-btn>
+          <v-btn fab class="round_btn" flat solo>
+            <v-icon>arrow_back_ios</v-icon>
+          </v-btn>
+
           <v-avatar size="100px">
             <img src="@/assets/sample_avatar.jpg">
           </v-avatar>
-          <v-btn xs3>오른쪽</v-btn>
+
+          <v-btn fab class="round_btn" flat solo>
+            <v-icon>arrow_forward_ios</v-icon>
+          </v-btn>
         </v-layout>
 
-        <p>{{item.name}} 요양보호사</p>
+        <p>김명희 요양보호사</p>
+        <p>[4.7/5]</p>
+        <p>20년 경력의 전문 요양보호사입니다. 가족같이 정성을 다해 돌보겠습니다.</p>
+        <!-- <p>{{item.name}} 요양보호사</p>
         <p>{{item.rating}}</p>
-        <p>{{item.description}}</p>
+        <p>{{item.description}}</p>-->
       </v-layout>
     </div>
 
@@ -41,6 +50,7 @@
 export default {
   data() {
     return {
+      eigenId: "1",
       items: [
         {
           id: "1",
@@ -74,10 +84,9 @@ export default {
       this.$router.push(route);
     },
     pressNext() {
+      console.log("jdsljalk");
       this.navigateTo({ name: "make_complete" });
-    },
-    pressLeft() {},
-    pressRight() {}
+    }
   }
 };
 </script>
@@ -108,5 +117,9 @@ td {
 table {
   border: 1px solid currentColor;
   border-color: #999999;
+}
+.round_btn {
+  height: 80px;
+  width: 80px;
 }
 </style>

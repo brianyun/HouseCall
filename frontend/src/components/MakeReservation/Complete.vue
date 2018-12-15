@@ -5,7 +5,7 @@
       <v-flex>
         <!-- <img src="@/assets/takeReservation/res_specific_guide.png"> -->
         <h2>예약 신청이 완료되었습니다.</h2>
-        <h2>화이팅</h2>
+        <h2>잠시 기다려 주시면 30분 내로 알림을 보내드립니다.</h2>
       </v-flex>
 
       <div class="blank-4"></div>
