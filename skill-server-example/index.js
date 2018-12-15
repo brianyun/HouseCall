@@ -94,6 +94,8 @@ apiRouter.post('/commerceCardTest', function(req, res){
           ]
         }
       }
+      res.status(200).send(responseBody);
+
 });
 
 app.listen(3000, function() {
