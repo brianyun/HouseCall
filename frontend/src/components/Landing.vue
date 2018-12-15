@@ -1,32 +1,24 @@
 <template>
-  <div>
+  <div style="background-color: white;">
     <v-layout>
-      <!-- <img src="@/assets/doctor_img.jpg"> -->
-      <img src="@/assets/landing.png">
+      <img src="@/assets/landing/landing.png">
     </v-layout>
 
-    <v-layout mt-3>
-      <v-flex>
-        <div>
-          <h2>병원이 문닫은 시간</h2>
-          <h2>00시~00시 사이,</h2>
-          <h2>전문의가 직접 찾아갑니다.</h2>
+    <v-layout>
+      <img src="@/assets/landing/landing_guide.png">
+    </v-layout>
+
+    <v-layout mt-4 justify-center>
+      <v-btn class="mainBtn" color="#1675fa" outline @click="pressReserve">
+        <div class="btnDiv">
+          <p>지금 예약하기</p>
         </div>
-      </v-flex>
-    </v-layout>
-
-    <v-layout mt-3>
-      <h4>대표 의료진</h4>
-    </v-layout>
-
-    <v-layout>
-      <v-avatar size="100px">
-        <img src="@/assets/sample_avatar.jpg">
-      </v-avatar>
+      </v-btn>
     </v-layout>
 
     <v-layout mt-4>
-      <v-btn dark large @click="pressReserve">예약하기</v-btn>
+      <div style="height: 10px;"></div>
+      <img src="@/assets/landing/landing_nurse.png">
     </v-layout>
   </div>
 </template>
@@ -49,8 +41,7 @@ export default {
     },
     pressReserve() {
       if (this.isUserLoggedIn) {
-        console.log("DEBUG: navigateTo({ name: reservation }");
-        // navigateTo({ name: "reservation" });
+        this.navigateTo({ name: "reservation" });
       } else {
         console.log("DEBUG: navigateTo({ name: login }");
         // navigateTo({ name: "login" });
@@ -78,5 +69,23 @@ img {
   max-width: 100%;
   object-fit: cover;
   border: 3pt black;
+}
+
+.mainBtn {
+  font-size: 17px;
+  font-weight: bolder;
+
+  padding-top: 10px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-bottom: 10px;
+
+  height: 47px;
+  width: 150px;
+  border-radius: 13px;
+  border-width: 2px;
+}
+.btnDiv {
+  transform: translateX(-25%);
 }
 </style>
